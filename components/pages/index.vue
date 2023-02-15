@@ -86,11 +86,7 @@ onMounted(() => {
       }
       @each $i in 1, 2, 3, 4, 5 {
         &:nth-child(#{$i}).active ~ .indicator {
-          @if $i == 1 {
-            transform: translateX(calc(70px * 0));
-          } @else {
-            transform: translateX(calc(70px * ($i - 1)));
-          }
+          transform: translateX(calc(70px * ($i - 1)));
         }
       }
       a {

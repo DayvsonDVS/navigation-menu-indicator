@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => ['ion-icon'].includes(tag)
+    }
+  },
   app: {
     head: {
       script: [
